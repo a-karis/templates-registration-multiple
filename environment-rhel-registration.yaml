@@ -1,0 +1,22 @@
+# Note this can be specified either in the call
+# to heat stack-create via an additional -e option
+# or via the global environment on the seed in
+# /etc/heat/environment.d/default.yaml
+parameter_defaults:
+  rhel_reg_activation_key: "1-e46b872a95250c618cf073b5023c614e"
+  rhel_reg_auto_attach: ""
+  rhel_reg_base_url: "https://satellite5.example.net/XMLRPC"
+  rhel_reg_environment: ""
+  rhel_reg_force: "true"
+  rhel_reg_machine_name: ""
+  rhel_reg_org: "1"
+  rhel_reg_password: ""
+  rhel_reg_pool_id: ""
+  rhel_reg_release: ""
+  rhel_reg_repos: ""
+  rhel_reg_sat_url: "http://satellite5.example.net"
+  rhel_reg_server_url: ""
+  rhel_reg_service_level: ""
+  rhel_reg_user: ""
+  rhel_reg_type: ""
+  rhel_reg_method: "satellite"

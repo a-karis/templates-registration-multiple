@@ -1,0 +1,19 @@
+heat_template_version: 2014-10-16
+description: 'Extra Pre-Deployment Config, multiple'
+parameters:
+  server:
+    type: string
+
+resources:
+
+  # Note depends_on may be used for serialization if ordering is important
+  OtherConfig:
+    type: other.yaml
+    properties:
+        server: {get_param: server}
+
+  RhelRegistration:
+    type: /usr/share/openstack-tripleo-heat-templates/extraconfig/pre_deploy/rhel-registration/rhel-registration.yaml
+    properties:
+        server: {get_param: server}
+
